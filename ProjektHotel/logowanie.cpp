@@ -9,7 +9,7 @@ Logowanie::Logowanie(QWidget *parent)
 {
     ui->setupUi(this);
     mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/dawid/Documents/GitHub/ZackiCody/sqlite/hotel.db");
+    mydb.setDatabaseName("hotel.db");
     if(!mydb.open())
     {
         qDebug()<<"Brak połączenia z bazą\n";
