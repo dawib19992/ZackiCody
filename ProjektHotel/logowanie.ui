@@ -27,7 +27,7 @@
      <string>Zaloguj się</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -48,11 +48,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="haslo_lineedit"/>
+      <widget class="QLineEdit" name="Haslo_lineedit"/>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -73,6 +73,19 @@
       <widget class="QLineEdit" name="Login_lineedit"/>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="rejestracja">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>310</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zarejestruj się</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

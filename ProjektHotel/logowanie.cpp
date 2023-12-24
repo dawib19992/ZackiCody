@@ -9,7 +9,7 @@ Logowanie::Logowanie(QWidget *parent)
 {
     ui->setupUi(this);
     mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("hotel.db");
+    mydb.setDatabaseName("C:/Users/dawid/Documents/GitHub/ZackiCody/sqlite/hotel.db");
     if(!mydb.open())
     {
         qDebug()<<"Brak połączenia z bazą\n";
@@ -25,10 +25,10 @@ Logowanie::~Logowanie()
     delete ui;
 }
 
-void Logowanie::on_zaloguj_clicked()
+void Logowanie::on_zaloguj_released()
 {
     QString login = ui->Login_lineedit->text();
-    QString haslo=ui->haslo_lineedit->text();
+    QString haslo = ui->Haslo_lineedit->text();
 
     Gosc gosc(login, haslo);
     QSqlQuery query;
@@ -49,14 +49,44 @@ void Logowanie::on_zaloguj_clicked()
         {
             qDebug()<<"Taki użytkownik nie występuje w bazie";
         }
-
     }
-
     if(dodano == 1)
     {
         this->close();
         Panelsterowania * ps = new Panelsterowania(gosc);
         ps->show();
+    }
+}
+
+
+void Logowanie::on_rejestracja_clicked()
+{
+    QString login, haslo;
+    login = ui->Login_lineedit->text();
+    haslo = ui->Haslo_lineedit->text();
+    if(!mydb.isOpen())
+    {
+        qDebug()<<"Failed to open the database";
+        return;
+    }
+
+    QSqlQuery countQuery("SELECT MAX(id) FROM loginy", mydb);
+    if (countQuery.exec() && countQuery.next()) {
+        int licznik = countQuery.value(0).toInt() + 1;
+
+        QSqlQuery insertQuery;
+        if(insertQuery.exec("INSERT INTO loginy VALUES(" + QString::number(licznik) + ", '" + login + "', '" + haslo + "')"))
+        {
+            qDebug() <<"Dodano użytkownika do bazy, teraz możesz się zalogować";
+        }
+        else
+        {
+            qDebug() << "Błąd wstawiania danych:" << insertQuery.lastError().text();
+        }
+    }
+    else
+    {
+        qDebug() << "Błąd pobierania wartości licznika:" << countQuery.lastError().text();
     }
 }
 

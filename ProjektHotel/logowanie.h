@@ -23,7 +23,9 @@ public:
     ~Logowanie();
 
 private slots:
-    void on_zaloguj_clicked();
+    void on_zaloguj_released();
+
+    void on_rejestracja_clicked();
 
 private:
     Ui::Logowanie *ui;

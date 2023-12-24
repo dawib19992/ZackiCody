@@ -27,14 +27,15 @@ class Ui_Logowanie
 public:
     QWidget *centralwidget;
     QPushButton *zaloguj;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QLabel *label;
-    QLineEdit *haslo_lineedit;
-    QWidget *widget1;
+    QLineEdit *Haslo_lineedit;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_2;
     QLineEdit *Login_lineedit;
+    QPushButton *rejestracja;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,39 +49,42 @@ public:
         zaloguj = new QPushButton(centralwidget);
         zaloguj->setObjectName(QString::fromUtf8("zaloguj"));
         zaloguj->setGeometry(QRect(330, 280, 80, 24));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(320, 210, 110, 48));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(320, 210, 110, 48));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setLayoutDirection(Qt::LeftToRight);
 
         verticalLayout->addWidget(label);
 
-        haslo_lineedit = new QLineEdit(widget);
-        haslo_lineedit->setObjectName(QString::fromUtf8("haslo_lineedit"));
+        Haslo_lineedit = new QLineEdit(layoutWidget);
+        Haslo_lineedit->setObjectName(QString::fromUtf8("Haslo_lineedit"));
 
-        verticalLayout->addWidget(haslo_lineedit);
+        verticalLayout->addWidget(Haslo_lineedit);
 
-        widget1 = new QWidget(centralwidget);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(320, 150, 110, 48));
-        verticalLayout_2 = new QVBoxLayout(widget1);
+        layoutWidget1 = new QWidget(centralwidget);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(320, 150, 110, 48));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_2 = new QLabel(widget1);
+        label_2 = new QLabel(layoutWidget1);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         verticalLayout_2->addWidget(label_2);
 
-        Login_lineedit = new QLineEdit(widget1);
+        Login_lineedit = new QLineEdit(layoutWidget1);
         Login_lineedit->setObjectName(QString::fromUtf8("Login_lineedit"));
 
         verticalLayout_2->addWidget(Login_lineedit);
 
+        rejestracja = new QPushButton(centralwidget);
+        rejestracja->setObjectName(QString::fromUtf8("rejestracja"));
+        rejestracja->setGeometry(QRect(330, 310, 80, 24));
         Logowanie->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Logowanie);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -101,6 +105,7 @@ public:
         zaloguj->setText(QCoreApplication::translate("Logowanie", "Zaloguj si\304\231", nullptr));
         label->setText(QCoreApplication::translate("Logowanie", "Has\305\202o:", nullptr));
         label_2->setText(QCoreApplication::translate("Logowanie", "Login", nullptr));
+        rejestracja->setText(QCoreApplication::translate("Logowanie", "Zarejestruj si\304\231", nullptr));
     } // retranslateUi
 
 };
