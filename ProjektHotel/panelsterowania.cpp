@@ -1,5 +1,6 @@
 #include "panelsterowania.h"
 #include "ui_panelsterowania.h"
+#include "logowanie.h"
 
 Panelsterowania::Panelsterowania(Gosc gosc, QWidget *parent)
     : QMainWindow(parent)
@@ -16,3 +17,11 @@ Panelsterowania::~Panelsterowania()
 {
     delete ui;
 }
+
+void Panelsterowania::on_wylogujSie_clicked()
+{
+    close();
+    Logowanie* wyloguj = new Logowanie(this);
+    wyloguj->show();
+}
+

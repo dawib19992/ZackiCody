@@ -18,13 +18,13 @@
     <property name="geometry">
      <rect>
       <x>649</x>
-      <y>440</y>
+      <y>430</y>
       <width>131</width>
-      <height>111</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="title">
-     <string>Twoje Dane:</string>
+     <string>TWOJE DANE:</string>
     </property>
     <property name="flat">
      <bool>false</bool>
@@ -64,6 +64,71 @@
       <string/>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="zarezerwujPokoj">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ZAREZERWUJ POKÓJ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zarezerwujSK">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ZAREZERWUJ SALĘ KONFERENCYJNĄ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zarezerwujParking">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ZAREZERWUJ PARKING</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sprawdzMenu">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SPRAWDŹ MENU</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="wylogujSie">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>WYLOGUJ SIĘ</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

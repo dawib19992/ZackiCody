@@ -16,6 +16,9 @@ public:
     explicit Panelsterowania(Gosc gosc, QWidget *parent = nullptr);
     ~Panelsterowania();
 
+private slots:
+    void on_wylogujSie_clicked();
+
 private:
     Ui::Panelsterowania *ui;
     QString login;
