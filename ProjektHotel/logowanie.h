@@ -2,6 +2,7 @@
 #define LOGOWANIE_H
 
 #include <QMainWindow>
+#include <QSqlDatabase>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +20,6 @@ public:
 
 private:
     Ui::Logowanie *ui;
+    QSqlDatabase mydb;
 };
 #endif // LOGOWANIE_H
