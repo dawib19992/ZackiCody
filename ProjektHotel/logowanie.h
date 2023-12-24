@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include <QSqlDatabase>
+#include <QtSql>
+#include <QtDebug>
+#include <QFileInfo>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,6 +21,9 @@ class Logowanie : public QMainWindow
 public:
     Logowanie(QWidget *parent = nullptr);
     ~Logowanie();
+
+private slots:
+    void on_zaloguj_clicked();
 
 private:
     Ui::Logowanie *ui;

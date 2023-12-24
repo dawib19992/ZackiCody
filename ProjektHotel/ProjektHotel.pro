@@ -11,14 +11,17 @@ CONFIG += c++17
 SOURCES += \
     gosc.cpp \
     main.cpp \
-    logowanie.cpp
+    logowanie.cpp \
+    panelsterowania.cpp
 
 HEADERS += \
     gosc.h \
-    logowanie.h
+    logowanie.h \
+    panelsterowania.h
 
 FORMS += \
-    logowanie.ui
+    logowanie.ui \
+    panelsterowania.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
