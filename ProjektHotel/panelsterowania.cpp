@@ -7,10 +7,7 @@ Panelsterowania::Panelsterowania(Gosc gosc, QWidget *parent)
     , ui(new Ui::Panelsterowania)
 {
     ui->setupUi(this);
-    login = gosc.getLogin();
-    haslo = gosc.getHaslo();
-    ui->td_login->setText(login);
-    ui->td_haslo->setText(haslo);
+    id = gosc.getID();
 }
 
 Panelsterowania::~Panelsterowania()

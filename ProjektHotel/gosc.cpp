@@ -1,15 +1,7 @@
 #include "gosc.h"
 
-Gosc::Gosc(const QString& login_, const QString& haslo_)
+Gosc::Gosc(const int id_)
 {
-    login = login_;
-    haslo = haslo_;
+    id = id_;
 }
-QString Gosc::getLogin() const
-{
-    return login;
-}
-QString Gosc::getHaslo() const
-{
-    return haslo;
-}
+

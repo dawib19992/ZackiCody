@@ -4,12 +4,13 @@
 
 class Gosc
 {
-    QString login;
-    QString haslo;
+    int id;
 public:
-    Gosc(const QString& login_, const QString& haslo_);
-    QString getLogin() const;
-    QString getHaslo() const;
+    Gosc(const int id_);
+    int getID() const
+    {
+        return id;
+    }
 };
 
 #endif // GOSC_H

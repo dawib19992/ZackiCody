@@ -20,8 +20,7 @@ private slots:
 
 private:
     Ui::Panelsterowania *ui;
-    QString login;
-    QString haslo;
+    int id;
 };
 
 #endif // PANELSTEROWANIA_H

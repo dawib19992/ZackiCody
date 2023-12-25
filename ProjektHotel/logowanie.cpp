@@ -30,10 +30,10 @@ void Logowanie::on_zaloguj_released()
     QString login = ui->Login_lineedit->text();
     QString haslo = ui->Haslo_lineedit->text();
 
-    Gosc gosc(login, haslo);
+    Gosc gosc(1);
     QSqlQuery query;
     int dodano = 0;
-    if(query.exec("select * from loginy where login='"+gosc.getLogin()+"'and haslo= '"+gosc.getHaslo()+"'"))
+    if(query.exec("select * from loginy where id = '"+QString::number(gosc.getID())+"'"))
     {
         int licznik = 0;
         while(query.next())
