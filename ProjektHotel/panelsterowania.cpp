@@ -26,28 +26,3 @@ void Panelsterowania::on_wylogujSie_clicked()
 }
 
 
-void Panelsterowania::on_zarezerwujPokoj_clicked()
-{
-    close();
-    rezerwacja = new Rezerwacja(this);
-    rezerwacja->show();
-
-}
-
-
-void Panelsterowania::on_zarezerwujSK_clicked()
-{
-    close();
-    rezerwacja = new Rezerwacja(this);
-    rezerwacja->show();
-}
-
-
-void Panelsterowania::on_zarezerwujParking_clicked()
-{
-    close();
-    rezerwacja = new Rezerwacja(this);
-    rezerwacja->show();
-}
-
-
