@@ -1,0 +1,10 @@
+debug/gosc.o
+debug/main.o
+debug/logowanie.o
+debug/menu.o
+debug/panelsterowania.o
+debug/rezerwacja.o
+debug/moc_logowanie.o
+debug/moc_menu.o
+debug/moc_panelsterowania.o
+debug/moc_rezerwacja.o

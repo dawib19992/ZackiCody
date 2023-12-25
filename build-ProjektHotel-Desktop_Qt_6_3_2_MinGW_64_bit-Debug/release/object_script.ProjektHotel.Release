@@ -1,0 +1,10 @@
+release/gosc.o
+release/main.o
+release/logowanie.o
+release/menu.o
+release/panelsterowania.o
+release/rezerwacja.o
+release/moc_logowanie.o
+release/moc_menu.o
+release/moc_panelsterowania.o
+release/moc_rezerwacja.o

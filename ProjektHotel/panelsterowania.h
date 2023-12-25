@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "gosc.h"
-
+#include "rezerwacja.h"
 namespace Ui {
 class Panelsterowania;
 }
@@ -19,10 +19,17 @@ public:
 private slots:
     void on_wylogujSie_clicked();
 
+    void on_zarezerwujPokoj_clicked();
+
+    void on_zarezerwujSK_clicked();
+
+    void on_zarezerwujParking_clicked();
+
 private:
     Ui::Panelsterowania *ui;
     QString login;
     QString haslo;
+    Rezerwacja* rezerwacja;
 };
 
 #endif // PANELSTEROWANIA_H

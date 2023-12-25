@@ -1,7 +1,7 @@
 #include "logowanie.h"
 #include "ui_logowanie.h"
 #include "gosc.h"
-#include "panelsterowania.h""
+#include "panelsterowania.h"
 
 Logowanie::Logowanie(QWidget *parent)
     : QMainWindow(parent)
