@@ -29,33 +29,40 @@ void Logowanie::on_zaloguj_released()
 {
     QString login = ui->Login_lineedit->text();
     QString haslo = ui->Haslo_lineedit->text();
-
-    Gosc gosc(1);
     QSqlQuery query;
-    int dodano = 0;
-    if(query.exec("select * from loginy where id = '"+QString::number(gosc.getID())+"'"))
+    int id_;
+    query.exec("select * from loginy where login='"+login+"' AND haslo='"+haslo+"'");
+    if(query.next())
     {
-        int licznik = 0;
-        while(query.next())
+        id_ = query.value(0).toInt();
+        Gosc gosc(id_);
+        int dodano = 0;
+        if(query.exec("select * from loginy where id = '"+QString::number(gosc.getID())+"'"))
         {
-            licznik++;
+            int licznik = 0;
+            while(query.next())
+            {
+                licznik++;
+            }
+            if(licznik == 1)
+            {
+                qDebug()<<"Poprawne login i hasło\n";
+                dodano++;
+            }
+
         }
-        if(licznik == 1)
+        if(dodano == 1)
         {
-            qDebug()<<"Poprawne login i hasło\n";
-            dodano++;
+            this->close();
+            Panelsterowania * ps = new Panelsterowania(gosc);
+            ps->show();
         }
-        if(licznik < 1)
-        {
+    }
+    else
+    {
             qDebug()<<"Taki użytkownik nie występuje w bazie";
-        }
     }
-    if(dodano == 1)
-    {
-        this->close();
-        Panelsterowania * ps = new Panelsterowania(gosc);
-        ps->show();
-    }
+
 }
 
 
