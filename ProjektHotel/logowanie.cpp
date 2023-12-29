@@ -35,9 +35,9 @@ void Logowanie::on_zaloguj_released()
     if(query.next())
     {
         id_ = query.value(0).toInt();
-        Gosc gosc(id_);
+        Gosc *gosc = new Gosc(id_);
         int dodano = 0;
-        if(query.exec("select * from loginy where id = '"+QString::number(gosc.getID())+"'"))
+        if(query.exec("select * from loginy where id = '"+QString::number(gosc->getID())+"'"))
         {
             int licznik = 0;
             while(query.next())
@@ -54,7 +54,7 @@ void Logowanie::on_zaloguj_released()
         if(dodano == 1)
         {
             this->close();
-            Panelsterowania * ps = new Panelsterowania(gosc);
+            Panelsterowania* ps =  new Panelsterowania(gosc);
             ps->show();
         }
     }
