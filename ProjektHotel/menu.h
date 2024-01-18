@@ -25,6 +25,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_zamow_clicked();
+
 private:
     Ui::Menu *ui;
     Gosc* obecnygosc;

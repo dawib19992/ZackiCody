@@ -14,7 +14,6 @@ Panelsterowania::Panelsterowania(Gosc* gosc, QWidget *parent)
 {
     ui->setupUi(this);
     setGosc(gosc);
-    qDebug()<<"id: "<<obecnygosc->getID();
     QSqlQuery query;
     query.exec("select * from loginy where id = '"+QString::number(obecnygosc->getID())+"'");
     if(query.next())
@@ -23,7 +22,6 @@ Panelsterowania::Panelsterowania(Gosc* gosc, QWidget *parent)
         QString haslo = query.value(2).toString();
         ui->td_login->setText(login);
         ui->td_haslo->setText(haslo);
-        qDebug()<<"Login: "<<login<<" Haslo: "<<haslo<<"\n";
     }
 }
 
