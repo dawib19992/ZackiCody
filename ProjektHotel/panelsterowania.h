@@ -20,7 +20,6 @@ private slots:
 
     void on_sprawdzMenu_clicked();
 
-
 private:
     Ui::Panelsterowania *ui;
     Gosc* obecnygosc;

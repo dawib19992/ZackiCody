@@ -65,45 +65,6 @@
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="zarezerwujPokoj">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>70</y>
-      <width>211</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ZAREZERWUJ POKÓJ</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="zarezerwujSK">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>200</y>
-      <width>211</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ZAREZERWUJ SALĘ KONFERENCYJNĄ</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="zarezerwujParking">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>330</y>
-      <width>211</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ZAREZERWUJ PARKING</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="sprawdzMenu">
     <property name="geometry">
      <rect>
@@ -199,6 +160,19 @@
       <string/>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="sprawdzMenu_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ZAREZERWUJ</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

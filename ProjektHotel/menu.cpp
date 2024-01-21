@@ -2,6 +2,7 @@
 #include "ui_menu.h"
 #include "panelsterowania.h"
 #include "gosc.h"
+#include <QSpinBox>
 
 void Menu::setGosc(Gosc* gosc_)
 {
@@ -21,7 +22,7 @@ Menu::Menu(Gosc* gosc, QWidget *parent)
         if(query.next())
         {
             licznik = query.value(0).toInt();
-            qDebug()<<licznik;
+
         }
     }
     for(int i = 1; i <= licznik; i++)
@@ -55,9 +56,19 @@ void Menu::on_pushButton_clicked()
 
 void Menu::on_zamow_clicked()
 {
+    qDebug()<<obecnygosc->getID();
     int id_jedzenia = ui->spinBox->value();
+    int licznik = 0;
+    QSqlQuery countquery;
+    if(countquery.exec("Select MAX(id) from zamowienia"));
+    {
+        if(countquery.next())
+        {
+            licznik = countquery.value(0).toInt() + 1;
+        }
+    }
     QSqlQuery query;
-    if(query.exec("INSERT INTO zamowienia VALUES(2,'"+QString::number(obecnygosc->getID())+"', '"+QString::number(id_jedzenia)+"'"))
+    if(query.exec("INSERT INTO zamowienia VALUES('"+QString::number(licznik)+"','"+QString::number(obecnygosc->getID())+"', '"+QString::number(id_jedzenia)+"'"))
     {
         if(query.next())
         {

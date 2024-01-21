@@ -2,6 +2,7 @@
 #include "ui_panelsterowania.h"
 #include "logowanie.h"
 #include "menu.h"
+#include "pokoj.h"
 
 void Panelsterowania::setGosc(Gosc* gosc)
 {
@@ -42,5 +43,13 @@ void Panelsterowania::on_sprawdzMenu_clicked()
     this->hide();
     Menu* menu = new Menu(obecnygosc);
     menu->show();
+}
+
+
+void Panelsterowania::on_rezerwujpokoj_clicked()
+{
+    this->hide();
+    Pokoj* pokoj = new Pokoj(obecnygosc);
+    pokoj->show();
 }
 
