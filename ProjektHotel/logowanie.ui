@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>Logowanie</class>
  <widget class="QMainWindow" name="Logowanie">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>595</width>
+    <height>365</height>
+   </rect>
+  </property>
   <property name="minimumSize">
    <size>
     <width>595</width>
@@ -152,7 +160,7 @@ padding-right : 20px;
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>20</y>
+      <y>0</y>
       <width>290</width>
       <height>104</height>
      </rect>
@@ -174,7 +182,7 @@ padding-right : 20px;
      <x>0</x>
      <y>0</y>
      <width>595</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

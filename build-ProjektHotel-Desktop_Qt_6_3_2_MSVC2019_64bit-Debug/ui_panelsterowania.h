@@ -15,6 +15,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -31,9 +32,9 @@ public:
     QPushButton *sprawdzMenu;
     QPushButton *wylogujSie;
     QGroupBox *groupBox_2;
-    QLabel *mr_qlabel;
+    QPlainTextEdit *plainTextEdit_2;
     QGroupBox *groupBox_4;
-    QLabel *mz_qlabel;
+    QPlainTextEdit *plainTextEdit;
     QPushButton *rezerwujSK;
     QPushButton *rezerwujPokoj;
     QPushButton *rezerwujParking;
@@ -70,22 +71,20 @@ public:
         wylogujSie->setGeometry(QRect(20, 20, 91, 24));
         groupBox_2 = new QGroupBox(centralwidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(570, 10, 211, 331));
+        groupBox_2->setGeometry(QRect(560, 10, 221, 331));
         groupBox_2->setFlat(false);
         groupBox_2->setCheckable(false);
-        mr_qlabel = new QLabel(groupBox_2);
-        mr_qlabel->setObjectName(QString::fromUtf8("mr_qlabel"));
-        mr_qlabel->setGeometry(QRect(10, 30, 191, 291));
-        mr_qlabel->setFrameShape(QFrame::Box);
+        plainTextEdit_2 = new QPlainTextEdit(groupBox_2);
+        plainTextEdit_2->setObjectName(QString::fromUtf8("plainTextEdit_2"));
+        plainTextEdit_2->setGeometry(QRect(10, 30, 201, 291));
         groupBox_4 = new QGroupBox(centralwidget);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
         groupBox_4->setGeometry(QRect(310, 10, 221, 331));
         groupBox_4->setFlat(false);
         groupBox_4->setCheckable(false);
-        mz_qlabel = new QLabel(groupBox_4);
-        mz_qlabel->setObjectName(QString::fromUtf8("mz_qlabel"));
-        mz_qlabel->setGeometry(QRect(10, 30, 201, 291));
-        mz_qlabel->setFrameShape(QFrame::Box);
+        plainTextEdit = new QPlainTextEdit(groupBox_4);
+        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
+        plainTextEdit->setGeometry(QRect(10, 30, 201, 291));
         rezerwujSK = new QPushButton(centralwidget);
         rezerwujSK->setObjectName(QString::fromUtf8("rezerwujSK"));
         rezerwujSK->setGeometry(QRect(20, 170, 211, 91));
@@ -106,7 +105,7 @@ public:
         rezerwujParking->raise();
         menubar = new QMenuBar(Panelsterowania);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 17));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         Panelsterowania->setMenuBar(menubar);
         statusbar = new QStatusBar(Panelsterowania);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -126,9 +125,14 @@ public:
         sprawdzMenu->setText(QCoreApplication::translate("Panelsterowania", "SPRAWD\305\271 MENU", nullptr));
         wylogujSie->setText(QCoreApplication::translate("Panelsterowania", "WYLOGUJ SI\304\230", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("Panelsterowania", "MOJE REZERWACJE:", nullptr));
-        mr_qlabel->setText(QString());
+        plainTextEdit_2->setPlainText(QCoreApplication::translate("Panelsterowania", "1. pokoj nr 205\n"
+"2. parking nr A205\n"
+"3. sala konferencyjna nr 3", nullptr));
         groupBox_4->setTitle(QCoreApplication::translate("Panelsterowania", "MOJE ZAM\303\223WIENIA:", nullptr));
-        mz_qlabel->setText(QString());
+        plainTextEdit->setPlainText(QCoreApplication::translate("Panelsterowania", "1. paruwa - pokoj 205\n"
+"2. Pier\305\233 z kurczaka - pokoj 205\n"
+"3. kotlet - pokoj 205\n"
+"", nullptr));
         rezerwujSK->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ SK", nullptr));
         rezerwujPokoj->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ POKOJ", nullptr));
         rezerwujParking->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ PARKING", nullptr));

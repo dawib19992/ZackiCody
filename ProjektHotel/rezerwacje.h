@@ -4,14 +4,14 @@
 
 class Rezerwacje
 {
-    int rodzaj_rezerwacji;//1-pokoj, 2-sk, 3-parking
     Gosc* obecnygosc;
+    int rodzajrezerwacji;
 public:
     Rezerwacje();
-    int getRodzajRezerwacji();
-    Gosc* getGosc();
-    void setRodzajRezerwacj(int rr);
     void setGosc(Gosc* gosc);
+    void setRR(int rr);
+    Gosc* getGosc();
+    int GetRR();
 };
 
 #endif // REZERWACJE_H

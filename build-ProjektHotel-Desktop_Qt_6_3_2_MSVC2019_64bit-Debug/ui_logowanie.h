@@ -42,6 +42,7 @@ public:
     {
         if (Logowanie->objectName().isEmpty())
             Logowanie->setObjectName(QString::fromUtf8("Logowanie"));
+        Logowanie->resize(595, 365);
         Logowanie->setMinimumSize(QSize(595, 365));
         Logowanie->setMaximumSize(QSize(595, 365));
         QFont font;
@@ -109,12 +110,12 @@ public:
         rejestracja->setFont(font1);
         label_pic = new QLabel(centralwidget);
         label_pic->setObjectName(QString::fromUtf8("label_pic"));
-        label_pic->setGeometry(QRect(160, 20, 290, 104));
+        label_pic->setGeometry(QRect(160, 0, 290, 104));
         label_pic->setMinimumSize(QSize(290, 104));
         Logowanie->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Logowanie);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 595, 17));
+        menubar->setGeometry(QRect(0, 0, 595, 21));
         Logowanie->setMenuBar(menubar);
         statusbar = new QStatusBar(Logowanie);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

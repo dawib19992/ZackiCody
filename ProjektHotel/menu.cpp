@@ -14,6 +14,7 @@ Menu::Menu(Gosc* gosc, QWidget *parent)
     , ui(new Ui::Menu)
 {
     ui->setupUi(this);
+    ui->menu->setReadOnly(1);
     setGosc(gosc);
     QSqlQuery query;
     int licznik = 0;

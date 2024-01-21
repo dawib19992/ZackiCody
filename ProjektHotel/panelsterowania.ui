@@ -98,9 +98,9 @@ color: rgb(223, 223, 223);</string>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>560</x>
       <y>10</y>
-      <width>211</width>
+      <width>221</width>
       <height>331</height>
      </rect>
     </property>
@@ -113,20 +113,19 @@ color: rgb(223, 223, 223);</string>
     <property name="checkable">
      <bool>false</bool>
     </property>
-    <widget class="QLabel" name="mr_qlabel">
+    <widget class="QPlainTextEdit" name="plainTextEdit_2">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>191</width>
+       <width>201</width>
        <height>291</height>
       </rect>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::Box</enum>
-     </property>
-     <property name="text">
-      <string/>
+     <property name="plainText">
+      <string>1. pokoj nr 205
+2. parking nr A205
+3. sala konferencyjna nr 3</string>
      </property>
     </widget>
    </widget>
@@ -148,7 +147,7 @@ color: rgb(223, 223, 223);</string>
     <property name="checkable">
      <bool>false</bool>
     </property>
-    <widget class="QLabel" name="mz_qlabel">
+    <widget class="QPlainTextEdit" name="plainTextEdit">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -157,11 +156,11 @@ color: rgb(223, 223, 223);</string>
        <height>291</height>
       </rect>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::Box</enum>
-     </property>
-     <property name="text">
-      <string/>
+     <property name="plainText">
+      <string>1. paruwa - pokoj 205
+2. Pierś z kurczaka - pokoj 205
+3. kotlet - pokoj 205
+</string>
      </property>
     </widget>
    </widget>
@@ -219,7 +218,7 @@ color: rgb(223, 223, 223);</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

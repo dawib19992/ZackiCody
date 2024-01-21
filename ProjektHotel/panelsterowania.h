@@ -20,6 +20,10 @@ private slots:
 
     void on_sprawdzMenu_clicked();
 
+    void on_rezerwujPokoj_clicked();
+
+    void on_rezerwujSK_clicked();
+
 private:
     Ui::Panelsterowania *ui;
     Gosc* obecnygosc;
