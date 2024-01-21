@@ -28,15 +28,15 @@ public:
     QGroupBox *groupBox;
     QLabel *td_login;
     QLabel *td_haslo;
-    QPushButton *zarezerwujPokoj;
-    QPushButton *zarezerwujSK;
-    QPushButton *zarezerwujParking;
     QPushButton *sprawdzMenu;
     QPushButton *wylogujSie;
     QGroupBox *groupBox_2;
     QLabel *mr_qlabel;
     QGroupBox *groupBox_4;
     QLabel *mz_qlabel;
+    QPushButton *rezerwujSK;
+    QPushButton *rezerwujPokoj;
+    QPushButton *rezerwujParking;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -60,15 +60,6 @@ public:
         td_haslo->setObjectName(QString::fromUtf8("td_haslo"));
         td_haslo->setGeometry(QRect(10, 70, 161, 31));
         td_haslo->setFrameShape(QFrame::Box);
-        zarezerwujPokoj = new QPushButton(centralwidget);
-        zarezerwujPokoj->setObjectName(QString::fromUtf8("zarezerwujPokoj"));
-        zarezerwujPokoj->setGeometry(QRect(20, 70, 211, 91));
-        zarezerwujSK = new QPushButton(centralwidget);
-        zarezerwujSK->setObjectName(QString::fromUtf8("zarezerwujSK"));
-        zarezerwujSK->setGeometry(QRect(20, 200, 211, 91));
-        zarezerwujParking = new QPushButton(centralwidget);
-        zarezerwujParking->setObjectName(QString::fromUtf8("zarezerwujParking"));
-        zarezerwujParking->setGeometry(QRect(20, 330, 211, 91));
         sprawdzMenu = new QPushButton(centralwidget);
         sprawdzMenu->setObjectName(QString::fromUtf8("sprawdzMenu"));
         sprawdzMenu->setGeometry(QRect(20, 460, 211, 91));
@@ -93,7 +84,24 @@ public:
         mz_qlabel->setObjectName(QString::fromUtf8("mz_qlabel"));
         mz_qlabel->setGeometry(QRect(10, 30, 201, 291));
         mz_qlabel->setFrameShape(QFrame::Box);
+        rezerwujSK = new QPushButton(centralwidget);
+        rezerwujSK->setObjectName(QString::fromUtf8("rezerwujSK"));
+        rezerwujSK->setGeometry(QRect(20, 170, 211, 91));
+        rezerwujPokoj = new QPushButton(centralwidget);
+        rezerwujPokoj->setObjectName(QString::fromUtf8("rezerwujPokoj"));
+        rezerwujPokoj->setGeometry(QRect(20, 60, 211, 91));
+        rezerwujParking = new QPushButton(centralwidget);
+        rezerwujParking->setObjectName(QString::fromUtf8("rezerwujParking"));
+        rezerwujParking->setGeometry(QRect(20, 280, 211, 91));
         Panelsterowania->setCentralWidget(centralwidget);
+        rezerwujPokoj->raise();
+        groupBox->raise();
+        sprawdzMenu->raise();
+        wylogujSie->raise();
+        groupBox_2->raise();
+        groupBox_4->raise();
+        rezerwujSK->raise();
+        rezerwujParking->raise();
         menubar = new QMenuBar(Panelsterowania);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 800, 21));
@@ -113,15 +121,15 @@ public:
         groupBox->setTitle(QCoreApplication::translate("Panelsterowania", "TWOJE DANE:", nullptr));
         td_login->setText(QString());
         td_haslo->setText(QString());
-        zarezerwujPokoj->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ POK\303\223J", nullptr));
-        zarezerwujSK->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ SAL\304\230 KONFERENCYJN\304\204", nullptr));
-        zarezerwujParking->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ PARKING", nullptr));
         sprawdzMenu->setText(QCoreApplication::translate("Panelsterowania", "SPRAWD\305\271 MENU", nullptr));
         wylogujSie->setText(QCoreApplication::translate("Panelsterowania", "WYLOGUJ SI\304\230", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("Panelsterowania", "MOJE REZERWACJE:", nullptr));
         mr_qlabel->setText(QString());
         groupBox_4->setTitle(QCoreApplication::translate("Panelsterowania", "MOJE ZAM\303\223WIENIA:", nullptr));
         mz_qlabel->setText(QString());
+        rezerwujSK->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ SK", nullptr));
+        rezerwujPokoj->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ POKOJ", nullptr));
+        rezerwujParking->setText(QCoreApplication::translate("Panelsterowania", "ZAREZERWUJ PARKING", nullptr));
     } // retranslateUi
 
 };

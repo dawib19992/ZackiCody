@@ -161,19 +161,53 @@
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="sprawdzMenu_2">
+   <widget class="QPushButton" name="rezerwujSK">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>350</y>
+      <y>170</y>
       <width>211</width>
       <height>91</height>
      </rect>
     </property>
     <property name="text">
-     <string>ZAREZERWUJ</string>
+     <string>ZAREZERWUJ SK</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="rezerwujPokoj">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ZAREZERWUJ POKOJ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rezerwujParking">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ZAREZERWUJ PARKING</string>
+    </property>
+   </widget>
+   <zorder>rezerwujPokoj</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>sprawdzMenu</zorder>
+   <zorder>wylogujSie</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>rezerwujSK</zorder>
+   <zorder>rezerwujParking</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

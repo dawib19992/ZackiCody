@@ -45,11 +45,3 @@ void Panelsterowania::on_sprawdzMenu_clicked()
     menu->show();
 }
 
-
-void Panelsterowania::on_rezerwujpokoj_clicked()
-{
-    this->hide();
-    Pokoj* pokoj = new Pokoj(obecnygosc);
-    pokoj->show();
-}
-

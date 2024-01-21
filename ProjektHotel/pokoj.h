@@ -17,7 +17,6 @@ public:
     ~Pokoj();
 
 private slots:
-    void on_kalendarz_activated(const QDate &date);
 
 private:
     Ui::Pokoj *ui;

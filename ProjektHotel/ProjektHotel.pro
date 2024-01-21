@@ -14,7 +14,6 @@ SOURCES += \
     logowanie.cpp \
     menu.cpp \
     panelsterowania.cpp \
-    pokoj.cpp \
     rezerwacje.cpp
 
 HEADERS += \
@@ -22,14 +21,12 @@ HEADERS += \
     logowanie.h \
     menu.h \
     panelsterowania.h \
-    pokoj.h \
     rezerwacje.h
 
 FORMS += \
     logowanie.ui \
     menu.ui \
-    panelsterowania.ui \
-    pokoj.ui
+    panelsterowania.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

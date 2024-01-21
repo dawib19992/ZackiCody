@@ -15,10 +15,3 @@ Pokoj::~Pokoj()
     delete ui;
 }
 
-void Pokoj::on_kalendarz_activated(const QDate &date)
-{
-    QDate data_roz = ui->kalendarz->selectedDate();
-    qDebug()<<"Data rozpoczęcia: "<<data_roz;
-
-}
-
