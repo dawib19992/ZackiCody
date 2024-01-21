@@ -37,24 +37,27 @@ public:
         if (Menu->objectName().isEmpty())
             Menu->setObjectName(QString::fromUtf8("Menu"));
         Menu->resize(343, 391);
+        Menu->setStyleSheet(QString::fromUtf8("background-color: rgb(20, 28, 36);\n"
+"color: rgb(223, 223, 223);"));
         centralwidget = new QWidget(Menu);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(30, 20, 80, 24));
+        pushButton->setGeometry(QRect(10, 0, 80, 24));
         zamow = new QPushButton(centralwidget);
         zamow->setObjectName(QString::fromUtf8("zamow"));
         zamow->setGeometry(QRect(59, 300, 91, 31));
         menu = new QPlainTextEdit(centralwidget);
         menu->setObjectName(QString::fromUtf8("menu"));
         menu->setGeometry(QRect(30, 50, 281, 241));
+        menu->setStyleSheet(QString::fromUtf8("background-color: rgb(40, 56, 72);"));
         spinBox = new QSpinBox(centralwidget);
         spinBox->setObjectName(QString::fromUtf8("spinBox"));
         spinBox->setGeometry(QRect(160, 300, 42, 31));
         Menu->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Menu);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 343, 21));
+        menubar->setGeometry(QRect(0, 0, 343, 17));
         Menu->setMenuBar(menubar);
         statusbar = new QStatusBar(Menu);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -68,7 +71,7 @@ public:
     void retranslateUi(QMainWindow *Menu)
     {
         Menu->setWindowTitle(QCoreApplication::translate("Menu", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("Menu", "Powrot", nullptr));
+        pushButton->setText(QCoreApplication::translate("Menu", "Powr\303\263t", nullptr));
         zamow->setText(QCoreApplication::translate("Menu", "Zam\303\263w", nullptr));
     } // retranslateUi
 

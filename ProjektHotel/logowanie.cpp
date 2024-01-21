@@ -2,14 +2,18 @@
 #include "ui_logowanie.h"
 #include "gosc.h"
 #include "panelsterowania.h"
+#include <QPixmap>
 
 Logowanie::Logowanie(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Logowanie)
 {
     ui->setupUi(this);
+    QPixmap pix("C:/Users/dawso/Desktop/projekt front/ZackiCody/ProjektHotel/logo.png");
+    ui->label_pic->setPixmap(pix);
+
     mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/dawid/Documents/GitHub/ZackiCody/sqlite/hotel.db");
+    mydb.setDatabaseName("C:/Users/dawso/Desktop/projekt front/ZackiCody/sqlite/hotel.db");
     if(!mydb.open())
     {
         qDebug()<<"Brak połączenia z bazą\n";

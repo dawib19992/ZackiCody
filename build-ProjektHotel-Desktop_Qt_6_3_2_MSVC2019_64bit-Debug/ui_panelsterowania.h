@@ -45,6 +45,8 @@ public:
         if (Panelsterowania->objectName().isEmpty())
             Panelsterowania->setObjectName(QString::fromUtf8("Panelsterowania"));
         Panelsterowania->resize(800, 600);
+        Panelsterowania->setStyleSheet(QString::fromUtf8("background-color: rgb(20, 28, 36);\n"
+"color: rgb(223, 223, 223);"));
         centralwidget = new QWidget(Panelsterowania);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
@@ -104,7 +106,7 @@ public:
         rezerwujParking->raise();
         menubar = new QMenuBar(Panelsterowania);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 800, 17));
         Panelsterowania->setMenuBar(menubar);
         statusbar = new QStatusBar(Panelsterowania);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

@@ -2,26 +2,45 @@
 <ui version="4.0">
  <class>Logowanie</class>
  <widget class="QMainWindow" name="Logowanie">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>765</width>
-    <height>564</height>
-   </rect>
+  <property name="minimumSize">
+   <size>
+    <width>595</width>
+    <height>365</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>595</width>
+    <height>365</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>13</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Logowanie</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(20, 28, 36);
+color: rgb(223, 223, 223);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="zaloguj">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>280</y>
-      <width>80</width>
+      <x>240</x>
+      <y>240</y>
+      <width>111</width>
       <height>24</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Zaloguj się</string>
@@ -30,61 +49,122 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>210</y>
+      <x>240</x>
+      <y>180</y>
       <width>110</width>
-      <height>48</height>
+      <height>54</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="label">
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
+      <widget class="QLineEdit" name="Haslo_lineedit">
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
-       <property name="text">
-        <string>Hasło:</string>
+       <property name="styleSheet">
+        <string notr="true">QlineEdit{
+border : 2px solid rgb(37,39,48);
+border-radius : 20px;
+color: #FFF;
+padding-left : 20px;
+padding-right : 20px;
+	background-color: rgb(170, 170, 255);
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="placeholderText">
+        <string>Hasło </string>
        </property>
       </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="Haslo_lineedit"/>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>150</y>
-      <width>110</width>
-      <height>48</height>
+      <x>240</x>
+      <y>110</y>
+      <width>111</width>
+      <height>75</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
+      <widget class="QLineEdit" name="Login_lineedit">
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QlineEdit{
+border : 2px solid rgb(37,39,48);
+border-radius : 20px;
+color: #FFF;
+padding-left : 20px;
+padding-right : 20px;
+
+}</string>
+       </property>
+       <property name="placeholderText">
         <string>Login</string>
        </property>
       </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="Login_lineedit"/>
      </item>
     </layout>
    </widget>
    <widget class="QPushButton" name="rejestracja">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>310</y>
-      <width>80</width>
+      <x>240</x>
+      <y>270</y>
+      <width>111</width>
       <height>24</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>Zarejestruj się</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_pic">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>290</width>
+      <height>104</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>290</width>
+      <height>104</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
@@ -93,8 +173,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>765</width>
-     <height>21</height>
+     <width>595</width>
+     <height>17</height>
     </rect>
    </property>
   </widget>
